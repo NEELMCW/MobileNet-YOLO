@@ -124,13 +124,13 @@ def print_prototxt(net_info):
         
     props = net_info['props']
     layers = net_info['layers']
-    print('name: \"%s\"' % props['name'])
-    print('input: \"%s\"' % props['input'])
-    print('input_dim: %s' % props['input_dim'][0])
-    print('input_dim: %s' % props['input_dim'][1])
-    print('input_dim: %s' % props['input_dim'][2])
-    print('input_dim: %s' % props['input_dim'][3])
-    print('')
+   # print('name: \"%s\"' % props['name'])
+   # print('input: \"%s\"' % props['input'])
+   # print('input_dim: %s' % props['input_dim'][0])
+   # print('input_dim: %s' % props['input_dim'][1])
+   # print('input_dim: %s' % props['input_dim'][2])
+   # print('input_dim: %s' % props['input_dim'][3])
+   # print('')
     for layer in layers:
         print_block(layer, 'layer', 0)
 
@@ -163,12 +163,12 @@ def save_prototxt(net_info, protofile, region=True):
     props = net_info['props']
     layers = net_info['layers']
     print >> fp, 'name: \"%s\"' % props['name']
-    print >> fp, 'input: \"%s\"' % props['input']
-    print >> fp, 'input_dim: %s' % props['input_dim'][0]
-    print >> fp, 'input_dim: %s' % props['input_dim'][1]
-    print >> fp, 'input_dim: %s' % props['input_dim'][2]
-    print >> fp, 'input_dim: %s' % props['input_dim'][3]
-    print >> fp, ''
+    #print >> fp, 'input: \"%s\"' % props['input']
+    #print >> fp, 'input_dim: %s' % props['input_dim'][0]
+    #print >> fp, 'input_dim: %s' % props['input_dim'][1]
+    #print >> fp, 'input_dim: %s' % props['input_dim'][2]
+    #print >> fp, 'input_dim: %s' % props['input_dim'][3]
+    #print >> fp, ''
     for layer in layers:
         if layer['type'] != 'Region' or region == True:
             print_block(layer, 'layer', 0)
